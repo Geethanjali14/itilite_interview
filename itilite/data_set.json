@@ -1,0 +1,46 @@
+var obj = {"spending": {
+     "Actual_spending": {
+        "Sept 16": 20,
+        "Oct 16": 25,
+        "Nov 16": 15,
+        "Dec 16": 25
+    },
+    "Budget": { 
+       "Sept 16": 30,
+        "Oct 16": 40,
+        "Nov 16": 30,
+        "Dec 16": 50
+    }
+   },
+   "department":{
+    "Dept 1":{
+        "Budget":50,
+        "Actual":20
+    },
+    "Dept 2":{
+        "Budget":60,
+        "Actual":30
+    },
+    "Dept 3":{
+        "Budget":80,
+        "Actual":20
+    }
+   },
+   "Avg_travelCost":20000,
+   "Avg_hotelCost":4000,
+   "Avg_cabCost":5000,
+   "saving":{
+    "Travel":{
+        "Budget":50000,
+        "Actual":30000
+    },
+    "Hotel":{
+        "Budget":40000,
+        "Actual":10000
+    },
+    "Cab":{
+        "Budget":20000,
+        "Actual":10000
+    }
+   }
+} ;

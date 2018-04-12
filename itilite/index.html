@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+        <META NAME="Title" CONTENT="itilite"/>
+        <META NAME="Keywords" CONTENT="Travel cost reduction, cost reduction, travel optimization, cheap business travel, travel rewards, cheap flights, cheap business hotels"/>
+        <META NAME="Description" CONTENT="Reward employees to save on travel cost. A travel rewards platform to help corporates save upto 30% on travel cost by rewarding employees to make cost conscious choices"/>
+        <META NAME="Subject" CONTENT="Travel cost reduction, cost reduction, travel optimization, cheap business travel, travel rewards, cheap flights, cheap business hotels"/>
+        <META NAME="Language" CONTENT="en"/>
+        <META NAME="Robots" CONTENT="INDEX,FOLLOW"/>
+        <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap3.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable=no" /> -->
+        <title>itilite - home </title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+        <style media="screen">
+            .feature-icon{
+                padding-left: 35%;
+            }
+            @media only screen and (max-width: 768px) {
+                .feature-icon{
+                    padding-left: 45%;
+                }
+                .feature-text {
+                    text-align: center;
+                }
+
+
+            }
+            .panel {
+                border: none;
+                margin-bottom: 20px;
+                box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);
+                background-color: #fff;
+                border-radius: 4px;
+            }
+            .panel-warning > .panel-heading {
+                color: #ffffff;
+                background-color: #ee5c12;
+            }
+            .panel-heading {
+                border: none !important;
+                padding: 10px 20px;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+            }
+
+            .panel .panel-body {
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="top-bar">
+            <nav class="navbar">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                      
+                        <a class="navbar-brand" href="home">
+                            <img alt="Brand" style="width:140px" class="img-responsive" src="assets/images/itilite-logo-1.png">
+                           </a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul style="margin-top:8px;" class="nav navbar-nav navbar-right itilite-top">
+
+                            <li><a href="#" class="active" >Dashboard</a></li>
+                            <li><a href="#"  >Employees</a></li>
+                            <li><a href="#"  >Travel Policy</a></li>
+
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </section>
+
+
+
+
+
+        <div class="itilite-container hp">
+             <div class="row" style="margin-top:3%;">
+                <div class="col-md-1"></div>
+                <div class="col-md-5 col-xs-12 col-sm-12">
+                    <div class="panel panel-color panel-warning">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Where are you spending?</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div id="curve_chart" style="width: 90%; height: 20%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-xs-12 col-sm-12">
+                    <div class="panel panel-color panel-warning">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Which department is saving?</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div id="chart_div" style="width: 90%; height: 20%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <div class="row" style="margin-top:3%;">
+                <div class="col-md-1"></div>
+                <div class="col-md-5 col-xs-12 col-sm-12">
+                    <div class="panel panel-color panel-warning">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Key Metrics</h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table m-0" style="margin-top:3%;margin-bottom:9px;">
+
+                                <tbody>
+                                    <tr>
+                                        <td class="avg" style="width:85%;padding: 14px;">Average travel cost / trip</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td style="padding: 12px;">&#8377;<span id="avg_travel_cost"></span></td>
+                                    </tr>
+                                    <tr width="100%">
+                                        <td style="width:85%;padding: 14px;">Average hotel cost / night</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td style="padding: 12px;">&#8377;<span id="avg_hotel_cost"></span></td>
+                                    </tr>
+                                    <tr width="100%">
+                                        <td style="width:85%;padding: 14px;">Average cab cost / trip</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td style="padding: 12px;">&#8377;<span id="avg_cab_cost"></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-xs-12 col-sm-12">
+                    <div class="panel panel-color panel-warning">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">How are you saving?</h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-bordered m-0">
+
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Budget</th>
+                                        <th>Actual</th>
+                                        <th>Saving</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Travel</th>
+                                        <td id="travel_budget" ></td>
+                                        <td id="travel_actual"></td>
+                                        <td id="travel_save"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Hotel</th>
+                                        <td id="hotel_budget" ></td>
+                                        <td id="hotel_actual"></td>
+                                        <td id="hotel_save"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Cab</th>
+                                       <td id="cab_budget" ></td>
+                                        <td id="cab_actual"></td>
+                                        <td id="cab_save"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <section class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-lg-2 col-sm-6 col-xs-6" style="text-align: center;">
+                            &copy; | itilite
+                        </div>
+                        <div class="col-md-3 col-lg-2 col-sm-6 col-xs-6" style="text-align: center;">
+                            <a href="#"> Change Password</a>
+                        </div>
+                        <div class="col-md-2 margin-top-2-sm col-lg-2 col-sm-6 col-xs-6" style="text-align: center;">
+                            <a href="#"> FAQ</a>
+                        </div>
+                        <div class="col-md-3 margin-top-2-sm col-lg-2 col-sm-6 col-xs-6" style="text-align: center;">
+                            <a href="#" target="_BLANK"><img src="assets/images/fb.png" width="35px"/></a>
+                            <a href="#" target="_BLANK"><img src="assets/images/twitter-squared.png" width="35px"/></a>
+                            <a href="#" target="_BLANK"><img src="assets/images/linked-in.png" width="35px"/></a>
+                        </div>
+                        <div class="col-md-3 col-lg-4 col-sm-6 col-xs-12 right-placed-sm-center right-placed-sm-left footer-branding margin-top-2-sm">
+                            <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">support@itilite.com</a>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap3.min.js"></script>
+        <script src="assets/js/jquery.validate.min.js" crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.9.0/jarallax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js" crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript" src="data_set.json"></script>
+        <script>
+
+            document.getElementById("avg_travel_cost").innerHTML = obj["Avg_travelCost"];
+            document.getElementById("avg_hotel_cost").innerHTML = obj["Avg_hotelCost"];
+            document.getElementById("avg_cab_cost").innerHTML = obj["Avg_cabCost"];
+         
+          document.getElementById("travel_budget").innerHTML = "&#8377;"+obj["saving"]["Travel"]["Budget"];
+          document.getElementById("travel_actual").innerHTML = "&#8377;"+obj["saving"]["Travel"]["Actual"];
+            document.getElementById("travel_save").innerHTML = "&#8377;"+ (obj["saving"]["Travel"]["Budget"]-obj["saving"]["Travel"]["Actual"]);
+           
+            document.getElementById("hotel_budget").innerHTML = "&#8377;"+obj["saving"]["Hotel"]["Budget"];
+          document.getElementById("hotel_actual").innerHTML = "&#8377;"+obj["saving"]["Hotel"]["Actual"];
+            document.getElementById("hotel_save").innerHTML = "&#8377;"+ (obj["saving"]["Hotel"]["Budget"]-obj["saving"]["Cab"]["Actual"]);
+           
+            document.getElementById("cab_budget").innerHTML = "&#8377;"+obj["saving"]["Cab"]["Budget"];
+          document.getElementById("cab_actual").innerHTML = "&#8377;"+obj["saving"]["Cab"]["Actual"];
+            document.getElementById("cab_save").innerHTML = "&#8377;"+ (obj["saving"]["Cab"]["Budget"]-obj["saving"]["Cab"]["Actual"]);
+           
+        </script>
+        <script type="text/javascript">
+            google.charts.load('current', {'packages': ['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+                var dataRows = [['Month/Year', 'Actual Spending', 'Budget']];
+               
+                for (var key in obj["spending"]["Actual_spending"]) {
+                    dataRows.push([key, parseInt(obj["spending"]["Actual_spending"][key]), parseInt(obj["spending"]["Budget"][key])]);
+                }
+                
+                var line_data = google.visualization.arrayToDataTable(dataRows);
+
+                var options = {
+                    legend: {position: 'top'},
+                    colors: ['#4580e2', '#63c088']
+                };
+
+                var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+                chart.draw(line_data, options);
+            }
+        </script>
+        <script type="text/javascript">
+            google.charts.load('current', {packages: ['corechart', 'bar']});
+            google.charts.setOnLoadCallback(drawTitleSubtitle);
+
+            function drawTitleSubtitle() {
+                
+                 var dataRowsBar = [['','Budget','Actual Spending']];
+               
+                for (var key in obj["department"]) {
+                    dataRowsBar.push([key, parseInt(obj["department"][key]["Budget"]), parseInt(obj["department"][key]["Actual"])]);
+                }
+                
+                
+                var data = google.visualization.arrayToDataTable(dataRowsBar);
+
+                var materialOptions = {
+                    chart: {
+                    },
+                    hAxis: {
+                        minValue: 0,
+                        title: ''
+                    },
+                    vAxis: {
+                         title: '',
+                    },
+                    bars: 'horizontal',
+                     colors: ['#4580e2', '#63c088']
+                };
+                var materialChart = new google.charts.Bar(document.getElementById('chart_div'));
+                materialChart.draw(data, materialOptions);
+            }
+        </script>
+    </body>
+</html>
+
